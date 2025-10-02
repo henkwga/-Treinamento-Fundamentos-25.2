@@ -5,129 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DISCOSHOP</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        :root {
-            --bg: #0e0f11;
-            --txt: #f4f6f8;
-            --muted: #b8bec9;
-            --destaque: #78ff7a;
-            --cz: rgba(255, 255, 255, .08);
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        html,
-        body {
-            height: 100%
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, sans-serif;
-            color: var(--txt);
-            background: #0e0f11;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none
-        }
-
-        .container {
-            width: min(1200px, 92vw);
-            margin-inline: auto
-        }
-
-        .nav {
-            position: fixed;
-            inset-inline: 0;
-            top: 0;
-            background: rgba(14, 15, 17, .7);
-            border-bottom: 1px solid var(--cz);
-            z-index: 40
-        }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 0
-        }
-
-        .logo {
-            font-weight: 700;
-            letter-spacing: .14em
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            font-size: .95rem
-        }
-
-        .nav-links a:hover {
-            color: var(--txt)
-        }
-
-        .btn {
-            cursor: pointer;
-            padding: 10px 16px;
-            border-radius: 999px;
-            background: #ffffff10;
-            color: var(--txt);
-            border: 1px solid var(--cz)
-        }
-
-        .btn-primary {
-            background: var(--destaque);
-            color: #000;
-            border: 0
-        }
-
-        .primeiro {
-            padding-top: 96px;
-            text-align: center
-        }
-
-        .destaque {
-            font-size: clamp(64px, 15vw, 160px);
-            font-weight: 800;
-            letter-spacing: .02em
-        }
-
-        h1, .destaque{
-            margin-bottom: 0px;
-        }
-
-        .subtitulo {
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: .22em;
-            font-size: .8rem
-        }
-
-        .sep {
-            display: flex;
-            gap: 12px;
-            margin-top: 24px;
-            justify-content: center
-        }
-
-        footer {
-            border-top: 1px solid var(--cz);
-            color: var(--muted);
-            padding: 40px 0;
-            text-align: center
-        }
-    </style>
+    <link rel="shortcut icon" href="assets/imgs/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/globals.css">
 </head>
 
 <body>
@@ -135,8 +14,7 @@
         <div class="container nav-inner">
             <a href="#" class="logo">DISCOSHOP</a>
             <div class="nav-links">
-                <a href="#features">Recursos</a>
-                <a href="#galeria">Descobrir</a>
+                <a href="#galeria">Catálogo</a>
                 <a href="#reviews">Reviews</a>
             </div>
             <div>
@@ -146,13 +24,25 @@
         </div>
     </nav>
 
-    <header class="primeiro container">
-        <h1 class="destaque">DISCOSHOP</h1>
-        <p class="subtitulo">Muito mais que uma loja de discos</p>
-        <div class="sep">
-            <a class="btn btn-primary" href="#comprar">Ver mais</a>
+    <section class="hero container">
+        <h1 class="title">DISCOSHOP</h1>
+        <p class="subtitle">Muito mais que uma loja de discos</p>
+        <a class="btn btn-primary" href="#comprar">Ver mais</a>
+    </section>
+
+    <section class="about">
+        <div class="about__left">
+            <h1 class="title2">Quem somos nós?</h1>
+
         </div>
-    </header>
+
+        <div class="about__right">
+            <p class="subtitle">Muito mais que uma loja de discos</p>
+        </div>
+    </section>
+
+    </section>
+
 
     <footer>
         <div class="container">
