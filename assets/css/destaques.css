@@ -1,0 +1,138 @@
+@import url('root.css');
+
+.section {
+    padding: 64px 0;
+}
+
+.hl-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.hl-title {
+    font-size: clamp(24px, 3vw, 32px);
+    color: var(--cor01);
+    letter-spacing: .02em;
+    margin: 0;
+}
+
+.hl-sub {
+    margin: 4px 0 0;
+    color: var(--cor04);
+    opacity: .8;
+    font-size: .95rem;
+}
+
+.hl-ctrl {
+    display: flex;
+    gap: 8px;
+}
+
+.hl-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--cz);
+    background: #ffffff10;
+    color: var(--txt);
+    cursor: pointer;
+}
+
+.hl-btn:hover {
+    background: #ffffff18;
+}
+
+.hl-rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 240px;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 10px 2px 6px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+
+.album-card {
+    scroll-snap-align: start;
+}
+
+.album-card .album {
+    margin: 10px 0 4px;
+    font-size: 1rem;
+    color: var(--txt);
+}
+
+.album-card .artist {
+    margin: 0;
+    color: var(--cor03);
+    font-size: .9rem;
+}
+
+.cover {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2b2b2b, #444);
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .25);
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+}
+
+.cover:hover img {
+    transform: scale(1.05);
+}
+
+.price {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--cor01);
+    color: #000;
+    font-weight: 700;
+    font-size: .85rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+.preview {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+    display: grid;
+    place-items: center;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--cz);
+    background: #00000066;
+    color: var(--txt);
+    font-size: .9rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: .25s ease;
+    backdrop-filter: blur(2px);
+}
+
+.cover:hover .preview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+    .hl-rail {
+        display: grid;
+        grid-auto-flow: initial;
+        grid-auto-columns: initial;
+        grid-template-columns: repeat(5, 1fr);
+        overflow: visible;
+    }
+}

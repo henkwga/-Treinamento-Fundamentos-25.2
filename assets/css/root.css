@@ -1,0 +1,20 @@
+:root {
+  --bg: #000000;
+  --txt: #f4f6f8;
+  --cor01: #D4591C;
+  --cor02: #FFA622;
+  --cor03: #A6A6A6;
+  --cor04: #383838;
+  --cz: rgba(255, 255, 255, .08);
+
+  /* fontes e espaçamentos globais */
+  --font-main: system-ui, sans-serif;
+  --radius: 12px;
+  --transition: .3s ease;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--font-main);
+}

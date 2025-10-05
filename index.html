@@ -7,18 +7,19 @@
     <title>DISCOSHOP</title>
     <link rel="shortcut icon" href="assets/imgs/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/destaques.css">
+    <link rel="stylesheet" href="assets/css/categorias.css">
 </head>
 
 <body>
     <nav class="nav">
         <div class="container nav-inner">
-            <a href="#" class="logo">DISCOSHOP</a>
+            <a href="index.html" class="logo">DISCOSHOP</a>
             <div class="nav-links">
-                <a href="#galeria">Catálogo</a>
-                <a href="#reviews">Reviews</a>
+                <a href="catalogo.html">Catálogo</a>
             </div>
             <div>
-                <a class="btn" href="#galeria">Catálogo</a>
+                <a class="btn" href="catalogo.html">Catálogo</a>
                 <a class="btn btn-primary" href="#comprar">Comprar</a>
             </div>
         </div>
@@ -26,23 +27,61 @@
 
     <section class="hero container">
         <h1 class="title">DISCOSHOP</h1>
-        <p class="subtitle">Muito mais que uma loja de discos</p>
-        <a class="btn btn-primary" href="#comprar">Ver mais</a>
-    </section>
-
-    <section class="about">
-        <div class="about__left">
-            <h1 class="title2">Quem somos nós?</h1>
-
-        </div>
-
-        <div class="about__right">
-            <p class="subtitle">Muito mais que uma loja de discos</p>
+        <p class="tagline">Clássicos, raridades e novos sons girando sem parar.</p>
+        <div class="hero-buttons">
+            <a class="btn btn-primary" href="catalogo.html">Explorar catálogo</a>
+            <a class="btn" href="#novidades">Ver lançamentos</a>
         </div>
     </section>
 
+    <section id="novidades" class="section highlights">
+        <div class="container">
+            <header class="hl-head">
+                <div>
+                    <h2 class="hl-title">Destaques da Semana</h2>
+                    <p class="hl-sub">Acabaram de chegar — reedições, exclusividades e raridades</p>
+                </div>
+            </header>
+
+            <div class="hl-rail" id="hlRail"></div>
+        </div>
     </section>
 
+
+    <section id="categorias" class="section categories">
+        <div class="container">
+            <header class="cat-head">
+                <h2 class="cat-title">Categorias</h2>
+                <a class="cat-all" href="#catalogo">Ver catálogo completo →</a>
+            </header>
+
+            <div class="cat-grid">
+                <a class="cat-card" href="#catalogo?cat=rock" style="--img:url('assets/cats/rock.jpg')">
+                    <span class="cat-name">Rock Clássico</span>
+                </a>
+
+                <a class="cat-card" href="#catalogo?cat=mpb" style="--img:url('assets/cats/mpb.jpg')">
+                    <span class="cat-name">MPB &amp; Samba</span>
+                </a>
+
+                <a class="cat-card" href="#catalogo?cat=jazz" style="--img:url('assets/cats/jazz.jpg')">
+                    <span class="cat-name">Jazz &amp; Soul</span>
+                </a>
+
+                <a class="cat-card" href="#catalogo?cat=indie" style="--img:url('assets/cats/indie.jpg')">
+                    <span class="cat-name">Indie &amp; Alternativo</span>
+                </a>
+
+                <a class="cat-card" href="#catalogo?cat=ost" style="--img:url('assets/cats/ost.jpg')">
+                    <span class="cat-name">Trilhas Sonoras</span>
+                </a>
+
+                <a class="cat-card" href="#catalogo?cat=hiphop" style="--img:url('assets/cats/hiphop.jpg')">
+                    <span class="cat-name">Hip-Hop</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -50,6 +89,9 @@
             <small>© 2025 DISCOSHOP. Todos os direitos reservados.</small>
         </div>
     </footer>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/destaques.js"></script>
+
 </body>
 
 </html>

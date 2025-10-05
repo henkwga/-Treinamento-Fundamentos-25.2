@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "Bocanada",
+    "artist": "Gustavo Cerati",
+    "price": 199.0,
+    "image": "assets/imgs/albuns/gustavo_cerati-bocanada.jpg",
+    "category": "rock",
+    "weight": 90,
+    "description":""
+  },
+  {
+    "id": "2",
+    "title": "It Won't Always Be Like This",
+    "artist": "Inhaler",
+    "price": 169.0,
+    "image": "assets/imgs/albuns/inhaler - it won't always be like this.jpg",
+    "category": "indie",
+    "weight": 85,
+    "description":""
+  },
+  {
+    "id": "3",
+    "title": "Minas",
+    "artist": "Milton Nascimento",
+    "price": 189.0,
+    "image": "assets/imgs/albuns/milton nascimento - minas.jpg",
+    "category": "mpb",
+    "weight": 80,
+    "description":""
+  },
+  {
+    "id": "4",
+    "title": "The Name Of This Band Is Talking Heads",
+    "artist": "Talking Heads",
+    "price": 159.0,
+    "image": "assets/imgs/albuns/talking heads - the name of this band is talking heads.jpg",
+    "category": "rock",
+    "weight": 75,
+    "description":""
+  },
+  {
+    "id": "5",
+    "title": "When We Were Friends",
+    "artist": "The Backseat Lovers",
+    "price": 179.0,
+    "image": "assets/imgs/albuns/the backseat lovers - when we were friends.jpg",
+    "category": "mpb",
+    "weight": 70,
+    "description":""
+  }
+]

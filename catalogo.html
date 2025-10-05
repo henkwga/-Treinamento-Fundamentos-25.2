@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/catalogo.css">
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/destaques.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">DISCOSHOP</a>
+            <div class="nav-links">
+                <a href="#galeria">Catálogo</a>
+            </div>
+            <div>
+                <a class="btn" href="catalogo.html">Catálogo</a>
+                <a class="btn btn-primary" href="#comprar">Comprar</a>
+            </div>
+        </div>
+    </nav>
+    <section id="catalogo" class="section catalog">
+        <div class="container">
+            <header class="cat-head">
+                <h2 class="cat-title">Catálogo</h2>
+                <p class="hl-sub">Encontre seu próximo disco — filtre, ordene e explore</p>
+            </header>
+            <div class="cat-controls" id="catControls">
+                <div class="ctrl-left">
+                    <label class="sr-only" for="q">Buscar</label>
+                    <input id="q" class="input" type="search" placeholder="Buscar por artista, álbum…"
+                        autocomplete="off">
+
+                    <div class="chips" id="chipsCats">
+                    </div>
+                </div>
+
+                <div class="ctrl-right">
+                    <label class="select">
+                        <span>Ordenar</span>
+                        <select id="sort">
+                            <option value="weight-desc">Relevância</option>
+                            <option value="price-asc">Preço: menor → maior</option>
+                            <option value="price-desc">Preço: maior → menor</option>
+                            <option value="title-asc">Álbum A–Z</option>
+                            <option value="artist-asc">Artista A–Z</option>
+                        </select>
+                    </label>
+                    <label class="select">
+                        <span>Mostrar</span>
+                        <select id="pageSize">
+                            <option>12</option>
+                            <option>24</option>
+                            <option>48</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="grid" id="gridCatalogo" aria-live="polite"></div>
+
+            <div class="grid-footer">
+                <button id="loadMore" class="btn">Carregar mais</button>
+                <span id="countInfo" class="count-info"></span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="logo">DISCOSHOP</div>
+            <small>© 2025 DISCOSHOP. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+    <script src="assets/js/catalogo.js"></script>
+    <script src="assets/js/nav.js"></script>
+</body>
+
+</html>
