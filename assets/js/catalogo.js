@@ -24,6 +24,8 @@
         return;
     }
 
+
+    //gerador de slug (IA)
     const slug = s => (s || '').toLowerCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
         .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -158,7 +160,7 @@
         if (!btn) return;
         const id = btn.dataset.id;
         addToCart(id, 1);
-        toast('Adicionado ao carrinho!');
+        toast('adicionado ao carrinho!');
     });
 
 

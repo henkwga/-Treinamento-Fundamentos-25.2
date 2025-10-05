@@ -143,7 +143,6 @@
     cursor: pointer;
 }
 
-/* resumo */
 .cart-summary {
     border: 1px solid var(--cz);
     border-radius: 14px;

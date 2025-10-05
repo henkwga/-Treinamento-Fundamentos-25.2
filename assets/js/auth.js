@@ -8,6 +8,7 @@
     return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2,'0')).join('');
   }
 
+  //verificação de formato do email (IA)
   const emailOk = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
 
   function loadUsers(){
@@ -34,17 +35,17 @@
     msg.textContent = '';
 
     if (!name || !emailOk(email) || pass.length < 6){
-      msg.textContent = 'Verifique os campos (email válido e senha ≥ 6).';
+      msg.textContent = 'verifique os campos (email válido e senha no mínimo 6 caracteres).';
       return;
     }
     if (pass !== pass2){
-      msg.textContent = 'As senhas não coincidem.';
+      msg.textContent = 'as senhas não coincidem.';
       return;
     }
 
     const users = loadUsers();
     if (users.some(u => u.email === email)){
-      msg.textContent = 'Este e-mail já está cadastrado.';
+      msg.textContent = 'este e-mail já está cadastrado.';
       return;
     }
 
@@ -54,7 +55,7 @@
     setSession({ email });
 
     msg.style.color = 'var(--cor01)';
-    msg.textContent = 'Conta criada! Redirecionando…';
+    msg.textContent = 'conta criada, redirecionando…';
     setTimeout(() => location.href = 'catalogo.html', 700);
   }
 
@@ -69,18 +70,18 @@
     const users = loadUsers();
     const user = users.find(u => u.email === email);
     if (!user){
-      msg.textContent = 'E-mail não encontrado.';
+      msg.textContent = 'e-mail não encontrado.';
       return;
     }
     const passHash = await sha256(pass);
     if (user.passHash !== passHash){
-      msg.textContent = 'Senha incorreta.';
+      msg.textContent = 'senha incorreta.';
       return;
     }
 
     setSession({ email });
     msg.style.color = 'var(--cor01)';
-    msg.textContent = 'Bem-vindo! Redirecionando…';
+    msg.textContent = 'bem-vindo! redirecionando…';
     setTimeout(() => location.href = 'catalogo.html', 500);
   }
 
@@ -96,7 +97,7 @@
     if (sess){
       const users = loadUsers();
       const u = users.find(x => x.email === sess.email);
-      const name = u?.name?.split(' ')[0] || 'Usuário';
+      const name = u?.name?.split(' ')[0] || 'usuário';
 
       container.innerHTML = `
         <span class="nav-user" style="color:var(--cor03); margin-right:8px">Olá, ${name}</span>

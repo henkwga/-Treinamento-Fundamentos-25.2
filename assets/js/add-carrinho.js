@@ -6,5 +6,5 @@
     const item = cart.find(i => i.id === id);
     if (item) item.qty += qty; else cart.push({ id, qty });
     localStorage.setItem(LS_KEY, JSON.stringify(cart));
-    alert('Adicionado ao carrinho!');
+    alert('Adicionado ao carrinho');
   }

@@ -52,7 +52,7 @@
                 return;
             }
 
-            alert('Finalizando compra');
+            alert('finalizando compra');
         });
 
     }
@@ -74,7 +74,7 @@
     function applyCoupon() {
         const code = (couponInput.value || '').trim().toUpperCase();
         if (!code) { coupon = ''; localStorage.removeItem(COUPON_KEY); render(); return; }
-        if (!COUPONS[code]) { alert('Cupom inválido'); return; }
+        if (!COUPONS[code]) { alert('cupom inválido'); return; }
         coupon = code; localStorage.setItem(COUPON_KEY, coupon); render();
     }
 

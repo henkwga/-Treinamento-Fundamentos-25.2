@@ -34,10 +34,6 @@
     if (Array.isArray(PICKS) && PICKS.length) {
         destaque = PICKS.map(p => {
             const base = byId[p.id];
-            if (!base) {
-                console.warn('[Destaques] id não encontrado no JSON:', p.id);
-                return null;
-            }
             return { ...base, ...(p.override || {}) };
         }).filter(Boolean);
     } else {
