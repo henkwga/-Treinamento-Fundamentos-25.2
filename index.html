@@ -18,12 +18,11 @@
             <div class="nav-links">
                 <a href="catalogo.html">Catálogo</a>
             </div>
-            <div>
-                <a class="btn" href="catalogo.html">Catálogo</a>
-                <a class="btn btn-primary" href="#comprar">Comprar</a>
-            </div>
+
+            <div id="navAuth"></div>
         </div>
     </nav>
+
 
     <section class="hero container">
         <h1 class="title">DISCOSHOP</h1>
@@ -56,27 +55,27 @@
             </header>
 
             <div class="cat-grid">
-                <a class="cat-card" href="#catalogo?cat=rock" style="--img:url('assets/cats/rock.jpg')">
+                <a class="cat-card" href="catalogo.html?cat=rock" style="--img:url('assets/cats/rock.jpg')">
                     <span class="cat-name">Rock Clássico</span>
                 </a>
 
-                <a class="cat-card" href="#catalogo?cat=mpb" style="--img:url('assets/cats/mpb.jpg')">
+                <a class="cat-card" href="catalogo.html?cat=mpb" style="--img:url('assets/cats/mpb.jpg')">
                     <span class="cat-name">MPB &amp; Samba</span>
                 </a>
 
-                <a class="cat-card" href="#catalogo?cat=jazz" style="--img:url('assets/cats/jazz.jpg')">
+                <a class="cat-card" href="catalogo.html?cat=jazz" style="--img:url('assets/cats/jazz.jpg')">
                     <span class="cat-name">Jazz &amp; Soul</span>
                 </a>
 
-                <a class="cat-card" href="#catalogo?cat=indie" style="--img:url('assets/cats/indie.jpg')">
+                <a class="cat-card" href="catalogo.html?cat=indie" style="--img:url('assets/cats/indie.jpg')">
                     <span class="cat-name">Indie &amp; Alternativo</span>
                 </a>
 
-                <a class="cat-card" href="#catalogo?cat=ost" style="--img:url('assets/cats/ost.jpg')">
+                <a class="cat-card" href="catalogo.html?cat=ost" style="--img:url('assets/cats/ost.jpg')">
                     <span class="cat-name">Trilhas Sonoras</span>
                 </a>
 
-                <a class="cat-card" href="#catalogo?cat=hiphop" style="--img:url('assets/cats/hiphop.jpg')">
+                <a class="cat-card" href="catalogo.html?cat=hiphop" style="--img:url('assets/cats/hiphop.jpg')">
                     <span class="cat-name">Hip-Hop</span>
                 </a>
             </div>
@@ -91,6 +90,14 @@
     </footer>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/destaques.js"></script>
+    <script src="assets/js/add-carrinho.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        renderNavAuth(document.getElementById('navAuth'));
+    </script>
+
+
+
 
 </body>
 

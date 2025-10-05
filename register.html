@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Criar conta | DISCOSHOP</title>
+  <link rel="shortcut icon" href="assets/imgs/icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/globals.css" />
+  <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">DISCOSHOP</a>
+      <div class="nav-links"><a href="catalogo.html">Catálogo</a></div>
+      <div id="navAuth"></div>
+    </div>
+  </nav>
+
+  <section class="section auth">
+    <div class="container auth-wrap">
+      <h2 class="cart-title" style="margin-bottom:12px;color:var(--cor01)">Criar conta</h2>
+
+      <form id="formRegister" class="card" autocomplete="on">
+        <label class="label">Nome
+          <input class="input" type="text" id="regName" required minlength="2" placeholder="Seu nome">
+        </label>
+        <label class="label">E-mail
+          <input class="input" type="email" id="regEmail" required placeholder="seu@email.com">
+        </label>
+        <label class="label">Senha
+          <input class="input" type="password" id="regPass" required minlength="6" placeholder="mín. 6 caracteres">
+        </label>
+        <label class="label">Confirmar senha
+          <input class="input" type="password" id="regPass2" required placeholder="repita a senha">
+        </label>
+        <button class="btn btn-primary" type="submit" style="width:100%">Criar conta</button>
+        <p class="form-msg" id="regMsg"></p>
+      </form>
+
+      <p style="margin-top:10px;color:var(--cor03)">
+        Já tem conta?
+        <a href="login.html" class="btn" style="margin-left:6px">Entrar</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="logo">DISCOSHOP</div>
+      <small>© 2025 DISCOSHOP. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/auth.js"></script>
+  <script>renderNavAuth(document.getElementById('navAuth'));</script>
+</body>
+
+</html>

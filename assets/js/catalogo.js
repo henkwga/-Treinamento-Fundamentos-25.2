@@ -10,8 +10,8 @@
 
     const toBRL = v => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v || 0);
 
-    let all = [], view = []; 
-    let rendered = 0;      
+    let all = [], view = [];
+    let rendered = 0;
 
     const params = new URLSearchParams(location.search);
     const setParam = (k, v) => { v ? params.set(k, v) : params.delete(k); history.replaceState(null, '', `${location.pathname}?${params}`) };
@@ -23,6 +23,13 @@
         console.error(e);
         return;
     }
+
+    const slug = s => (s || '').toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+    all = all.map(a => ({ ...a, id: a.id || slug(`${a.artist}-${a.title}`) }));
+
 
     const categories = [...new Set(all.map(a => (a.category || 'outros')))].sort();
     chipsWrap.append(
@@ -115,15 +122,19 @@
             const card = document.createElement('article');
             card.className = 'album-card';
             const safeAlt = `${a.artist || ''} – ${a.title || ''}`.replace(/"/g, '&quot;');
+
             card.innerHTML = `
-        <div class="cover">
-          <img src="${a.image || ''}" alt="${safeAlt}">
-          <span class="price">${toBRL(a.price)}</span>
-          ${a.badge ? `<span class="badge">${a.badge}</span>` : ``}
-        </div>
-        <h3 class="album">${a.title || ''}</h3>
-        <p class="artist">${a.artist || ''}</p>
-      `;
+      <div class="cover">
+        <img src="${a.image || ''}" alt="${safeAlt}">
+        <span class="price">${toBRL(a.price)}</span>
+        ${a.badge ? `<span class="badge">${a.badge}</span>` : ``}
+      </div>
+      <h3 class="album">${a.title || ''}</h3>
+      <p class="artist">${a.artist || ''}</p>
+      <button class="btn add-to-cart" data-id="${a.id}" aria-label="Adicionar ${a.title || ''} ao carrinho">
+        Adicionar
+      </button>
+    `;
             frag.appendChild(card);
         });
 
@@ -131,6 +142,7 @@
         rendered += slice.length;
         updateFooter();
     }
+
 
     function updateFooter() {
         countInfo.textContent = view.length
@@ -140,5 +152,16 @@
     }
 
     apply(true);
+
+    grid.addEventListener('click', (e) => {
+        const btn = e.target.closest('.add-to-cart');
+        if (!btn) return;
+        const id = btn.dataset.id;
+        addToCart(id, 1);
+        toast('Adicionado ao carrinho!');
+    });
+
+
+    
 })();
 

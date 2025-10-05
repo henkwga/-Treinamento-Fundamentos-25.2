@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrinho | DISCOSHOP</title>
+    <link rel="shortcut icon" href="assets/imgs/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/destaques.css">
+    <link rel="stylesheet" href="assets/css/categorias.css">
+    <link rel="stylesheet" href="assets/css/carrinho.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">DISCOSHOP</a>
+            <div class="nav-links">
+                <a href="catalogo.html">Catálogo</a>
+            </div>
+
+            <div id="navAuth"></div>
+        </div>
+    </nav>
+    <section class="section cart">
+        <div class="container">
+            <header class="cart-head">
+                <h2 class="cart-title">Seu carrinho</h2>
+                <a href="catalogo.html" class="btn">Continuar comprando</a>
+            </header>
+
+            <div id="cartList" class="cart-list"></div>
+
+            <aside class="cart-summary" id="cartSummary" aria-live="polite">
+                <h3>Resumo</h3>
+
+                <div class="sum-row">
+                    <span>Subtotal</span>
+                    <strong id="sumSubtotal">R$ 0,00</strong>
+                </div>
+
+                <div class="sum-row">
+                    <label for="coupon">Cupom</label>
+                    <div class="coupon">
+                        <input id="coupon" type="text" placeholder="Ex.: VINIL10">
+                        <button id="applyCoupon" class="btn">Aplicar</button>
+                    </div>
+                </div>
+
+                <div class="sum-row">
+                    <span>Desconto</span>
+                    <strong id="sumDiscount">—</strong>
+                </div>
+
+                <div class="sum-row total">
+                    <span>Total</span>
+                    <strong id="sumTotal">R$ 0,00</strong>
+                </div>
+
+                <button id="checkout" class="btn btn-primary" style="width:100%">Finalizar compra</button>
+                <button id="clearCart" class="btn" style="width:100%; margin-top:10px">Esvaziar carrinho</button>
+            </aside>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="logo">DISCOSHOP</div>
+            <small>© 2025 DISCOSHOP. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/destaques.js"></script>
+    <script src="assets/js/carrinho.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        renderNavAuth(document.getElementById('navAuth'));
+    </script>
+
+
+
+</body>
+
+</html>

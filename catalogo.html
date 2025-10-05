@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/imgs/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/catalogo.css">
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/destaques.css">
-    <title>Document</title>
+    <title>Catálogo | DISCOSHOP</title>
 </head>
 
 <body>
@@ -15,14 +16,13 @@
         <div class="container nav-inner">
             <a href="index.html" class="logo">DISCOSHOP</a>
             <div class="nav-links">
-                <a href="#galeria">Catálogo</a>
+                <a href="catalogo.html">Catálogo</a>
             </div>
-            <div>
-                <a class="btn" href="catalogo.html">Catálogo</a>
-                <a class="btn btn-primary" href="#comprar">Comprar</a>
-            </div>
+
+            <div id="navAuth"></div>
         </div>
     </nav>
+
     <section id="catalogo" class="section catalog">
         <div class="container">
             <header class="cat-head">
@@ -76,6 +76,12 @@
     </footer>
     <script src="assets/js/catalogo.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/add-carrinho.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        renderNavAuth(document.getElementById('navAuth'));
+    </script>
+
 </body>
 
 </html>
